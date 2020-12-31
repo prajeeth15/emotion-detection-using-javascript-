@@ -1,0 +1,91 @@
+﻿<!--I hope you will like this chat bot-->       
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Chatbot" />
+    <meta name="description" content="A Chat Bot for developers." />
+    <meta name="author" content="AhsanParadise" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="img/icon.png" rel="icon" />
+    <title>A Chat Application</title>
+    <!---Links-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body onload="myLoader()" style="margin: 0;">
+    <div id="loader">
+      <!--Preloader spinner-->
+      <div class="lds-spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div style="display: none;" id="myDiv" class="animate-bottom">
+      <!--Auto Type Starts-->
+      <h1 class="auto">
+        <a
+          href=""
+          class="typewrite"
+          data-period="2000"
+          data-type='[ "Hi, I am a farmer.", "I am here to help you.", "I will make you feel like crap.", "Ask any questions" ]'
+        >
+          <span class="wrap"></span>
+        </a>
+      </h1>
+      <!--Colorful font-->
+      <div class="up"><h1>A Chat Application</h1></div>
+      <!--Button pop up-->
+      <button class="open-button" onclick="openForm()">Chat</button>
+
+      <div class="chat-popup" id="myForm">
+        <form class="form-container">
+          <label for="msg"><b>Message</b></label>
+          <textarea
+            placeholder="Type message... "
+            title="Press Enter & Backspace"
+            name="msg"
+            id="userBox"
+            type="text"
+            onkeydown="if (event.keyCode == 13) {talk()}"
+          ></textarea>
+          <div class="moon" id="chatLog">
+            <p class="kane"><i class="fa fa-refresh fa-spin"></i></p>
+          </div>
+
+          <button type="button" class="btn cancel" onclick="closeForm()">
+            Close
+          </button>
+        </form>
+      </div>
+      
+    <footer id="f" style="display: none;">
+      <b>Copyright © 2020</b> - All rights Reserved - 
+    </footer>
+    <!--Js-->
+    <script src="app.js"></script>
+  </body>
+</html>
